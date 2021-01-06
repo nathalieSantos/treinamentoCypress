@@ -1,0 +1,27 @@
+{
+  "name": "treinamentocypress",
+  "version": "1.0.0",
+  "description": "- Heverton Reis\r - Luma Lisley\r - Nathalie Santos\r - Philipe Santos \r - Rodrigo Silvestre",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathalieSantos/treinamentoCypress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nathalieSantos/treinamentoCypress/issues"
+  },
+  "homepage": "https://github.com/nathalieSantos/treinamentoCypress#readme",
+  "devDependencies": {
+    "cypress": "^6.2.1",
+    "cypress-cucumber-preprocessor": "^4.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/steps"
+  }
+}
