@@ -1,5 +1,4 @@
 import LoginPage from '../pageobjects/LoginPage'
-const secoes = {'Lista de Funcionários': '/pim/viewEmployeeList'}
 const loginPage = new LoginPage
 
 Given('o acesso ao sistema', () => {
