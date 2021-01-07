@@ -2,5 +2,5 @@
     "viewportWidth": 1024,
     "viewportHeight": 768,
     "defaultCommandTimeout": 10000,
-    "baseUrl": "https://opensource-demo.orangehrmlive.com/index.php/auth/login"
+    "baseUrl": "https://opensource-demo.orangehrmlive.com/index.php/"
 }

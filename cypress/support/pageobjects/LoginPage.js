@@ -1,11 +1,10 @@
 import LoginElements from '../elements/LoginElements'
 const loginElements = new LoginElements
-const url = Cypress.config("baseUrl")
 
 class LoginPage {
 
     systemAccess() {
-        cy.visit(url)
+        cy.visit('/auth/login')
     }
     setUser(user) {
         cy.get(loginElements.userField())
