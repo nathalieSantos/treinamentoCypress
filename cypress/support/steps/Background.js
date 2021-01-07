@@ -1,7 +1,5 @@
 import LoginPage from '../pageobjects/LoginPage'
-import PIMPage from '../pageobjects/PIMPage'
 const loginPage = new LoginPage
-const pimPage = new PIMPage
 
 Given('o acesso ao sistema', () => {
 	loginPage.systemAccess()
