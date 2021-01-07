@@ -15,6 +15,9 @@ And('informadas as credenciais', () => {
     })
 })
 
-And('acesso a seção {string}', (secao) => {
-	cy.visit(secoes[secao])
+And('acesso à seção {string}', (secao) => {
+    cy.fixture('secoes.json')
+    .then(secoes => {
+        cy.visit(secoes[secao])
+    })
 })
