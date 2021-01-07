@@ -1,5 +1,6 @@
 import LoginPage from '../pageobjects/LoginPage'
 import PIMPage from '../pageobjects/PIMPage'
+const secoes = {'Adicionar Funcionário': '/pim/addEmployee'}
 const loginPage = new LoginPage
 const pimPage = new PIMPage
 
@@ -16,6 +17,6 @@ And('informadas as credenciais', () => {
     })
 })
 
-And('acesso à Lista de Funcionários', () => {
-	pimPage.goToPIM()
+And('acesso a seção {string}', (secao) => {
+	cy.visit(secoes[secao])
 })
