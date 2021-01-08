@@ -7,7 +7,7 @@ Feature: Adicionar funcionário
 Background: Login e acesso a seção de adicionar usuário
     Given o acesso ao sistema
     And informadas as credenciais
-    #And confirmado o acesso ao sistema
+    And confirmado o acesso ao sistema
     And acesso à seção "Adicionar Funcionário"
 
 #Adicionar usuário

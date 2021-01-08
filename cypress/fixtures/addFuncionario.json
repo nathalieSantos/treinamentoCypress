@@ -1,0 +1,128 @@
+[
+    {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": ""
+    },
+    {
+        "firstName": "",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": ""
+    },
+    {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "",
+        "employeeId": ""
+    },
+    {
+        "firstName": "",
+        "middleName": "dos",
+        "lastName": "",
+        "employeeId": ""
+    },
+    {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "0002"
+    },
+    {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "000A"
+    },
+    {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "",
+        "user_name": "josecampos",
+        "user_password": "testeCypress",
+        "re_password": "testeCypress"
+    },
+    {
+        "firstName": "",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "",
+        "user_name": "josecampos",
+        "user_password": "testeCypress",
+        "re_password": "testeCypress"
+    },
+    {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "",
+        "employeeId": "",
+        "user_name": "josecampos",
+        "user_password": "testeCypress",
+        "re_password": "testeCypress"
+    },
+    {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "",
+        "user_name": "",
+        "user_password": "testeCypress",
+        "re_password": "testeCypress"
+    },
+    {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "",
+        "user_name": "josecampos",
+        "user_password": "",
+        "re_password": "testeCypress"
+    },
+    {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "",
+        "user_name": "josecampos",
+        "user_password": "testeCypress",
+        "re_password": ""
+    },
+    {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "",
+        "user_name": "jose",
+        "user_password": "testeCypress",
+        "re_password": "testeCypress"
+    },
+    {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "",
+        "user_name": "josecampos",
+        "user_password": "teste",
+        "re_password": "teste"
+    },
+    {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "",
+        "user_name": "josecampos",
+        "user_password": "testeCypress",
+        "re_password": "teste"
+    },
+    {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "",
+        "user_name": "josecampos",
+        "user_password": "12345678",
+        "re_password": "12345678"
+    }
+]
