@@ -7,6 +7,7 @@ Feature: Excluir Funcionário
     Background: Acesso à Lista de Funcionários
         Given o acesso ao sistema
         And informadas as credenciais
+        And confirmado o acesso ao sistema
         And acesso à seção "Lista de Funcionários"
 
     @focus
