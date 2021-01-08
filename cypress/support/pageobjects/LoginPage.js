@@ -18,6 +18,10 @@ class LoginPage {
         cy.get(loginElements.submitBtn())
         .click()
     }
+    accessOk(){
+        cy.url()
+        .should('be.equal',`${Cypress.config("baseUrl")}dashboard`)
+    }
 }
 
 export default LoginPage

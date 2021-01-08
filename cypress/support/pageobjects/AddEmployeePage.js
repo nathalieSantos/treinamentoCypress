@@ -16,7 +16,22 @@ class AddEmployeePage {
         cy.typeChecaVazio(addEmpElements.lastNameField(), lastName)
     }
     setId(id) {
+        cy.get(addEmpElements.idField)
+            .clear()
         cy.typeChecaVazio(addEmpElements.idField(), id)
+    }
+    setUsername(username){
+        cy.typeChecaVazio(addEmpElements.usernameField(), username)
+    }
+    setPassword(password){
+        cy.typeChecaVazio(addEmpElements.passwordField(), password)
+    }
+    setRePassword(password){
+        cy.typeChecaVazio(addEmpElements.repasswordField(), password)
+    }
+    setStatus(status){
+        cy.get(addEmpElements.statusSelect())
+            .select(status)
     }
     saveEmployee() {
         cy.get(addEmpElements.saveBtn())

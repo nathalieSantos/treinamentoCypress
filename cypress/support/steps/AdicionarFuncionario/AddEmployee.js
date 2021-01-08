@@ -1,8 +1,14 @@
-import AddEmployeePage from '../pageobjects/AddEmployeePage'
+import AddEmployeePage from '../../pageobjects/AddEmployeePage'
 const addEmpPage = new AddEmployeePage
-
+let funcionarios = []
+before(()=>{
+    cy.fixture('addFuncionario').then( info=>{
+        funcionarios=info
+    })
+})
 When('é preenchido o nome do funcionário', dt => {
-    console.log(dt)
+    const a = "sem id"
+    console.log(funcionarios[a])
     dt.hashes().forEach(item =>{
         addEmpPage.setFirstName(item.first_name)
         addEmpPage.setMiddleName(item.middle_name)
@@ -11,10 +17,10 @@ When('é preenchido o nome do funcionário', dt => {
 })
 
 And('persistir as informações', () => {
-	addEmpPage.saveEmployee()
+	//addEmpPage.saveEmployee()
 })
 
 Then('o funcionário é adicionado ao sistema', () => {
-	
+	cy.url().should('contain', 'viewPersonalDetails')
 })
 

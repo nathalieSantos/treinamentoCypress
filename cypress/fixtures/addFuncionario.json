@@ -1,128 +1,134 @@
-[
-    {
+{
+    "completo sem login": {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "00001"
+    },
+    "sem primeiro nome sem login": {
+        "firstName": "",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "00002"
+    },
+    "sem último nome sem login": {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "",
+        "employeeId": "00003"
+    },
+    "sem id":{
         "firstName": "José",
         "middleName": "dos",
         "lastName": "Campos",
         "employeeId": ""
     },
-    {
-        "firstName": "",
-        "middleName": "dos",
-        "lastName": "Campos",
-        "employeeId": ""
-    },
-    {
-        "firstName": "José",
-        "middleName": "dos",
-        "lastName": "",
-        "employeeId": ""
-    },
-    {
-        "firstName": "",
-        "middleName": "dos",
-        "lastName": "",
-        "employeeId": ""
-    },
-    {
+    "com id repetido":{
         "firstName": "José",
         "middleName": "dos",
         "lastName": "Campos",
         "employeeId": "0002"
     },
-    {
+    "com id inválido":{
         "firstName": "José",
         "middleName": "dos",
         "lastName": "Campos",
-        "employeeId": "000A"
+        "employeeId": "0002A"
     },
-    {
+    "completo com login": {
         "firstName": "José",
         "middleName": "dos",
         "lastName": "Campos",
-        "employeeId": "",
+        "employeeId": "00006",
         "user_name": "josecampos",
         "user_password": "testeCypress",
         "re_password": "testeCypress"
     },
-    {
+    "sem primeiro nome com login": {
         "firstName": "",
         "middleName": "dos",
         "lastName": "Campos",
-        "employeeId": "",
+        "employeeId": "00007",
         "user_name": "josecampos",
         "user_password": "testeCypress",
         "re_password": "testeCypress"
     },
-    {
+    "sem último nome com login": {
         "firstName": "José",
         "middleName": "dos",
         "lastName": "",
-        "employeeId": "",
+        "employeeId": "00008",
         "user_name": "josecampos",
         "user_password": "testeCypress",
         "re_password": "testeCypress"
     },
-    {
+    "sem usuário": {
         "firstName": "José",
         "middleName": "dos",
         "lastName": "Campos",
-        "employeeId": "",
+        "employeeId": "00009",
         "user_name": "",
         "user_password": "testeCypress",
         "re_password": "testeCypress"
     },
-    {
+    "sem senha": {
         "firstName": "José",
         "middleName": "dos",
         "lastName": "Campos",
-        "employeeId": "",
+        "employeeId": "00010",
         "user_name": "josecampos",
         "user_password": "",
         "re_password": "testeCypress"
     },
-    {
+    "sem repetir senha": {
         "firstName": "José",
         "middleName": "dos",
         "lastName": "Campos",
-        "employeeId": "",
+        "employeeId": "00011",
         "user_name": "josecampos",
         "user_password": "testeCypress",
         "re_password": ""
     },
-    {
+    "com usuário inválido": {
         "firstName": "José",
         "middleName": "dos",
         "lastName": "Campos",
-        "employeeId": "",
+        "employeeId": "00012",
         "user_name": "jose",
         "user_password": "testeCypress",
         "re_password": "testeCypress"
     },
-    {
+    "com senha inválida": {
         "firstName": "José",
         "middleName": "dos",
         "lastName": "Campos",
-        "employeeId": "",
+        "employeeId": "00013",
         "user_name": "josecampos",
         "user_password": "teste",
         "re_password": "teste"
     },
-    {
+    "com repetir senha incompatível": {
         "firstName": "José",
         "middleName": "dos",
         "lastName": "Campos",
-        "employeeId": "",
+        "employeeId": "00014",
         "user_name": "josecampos",
         "user_password": "testeCypress",
         "re_password": "teste"
     },
-    {
+    "com senha muito fraca": {
         "firstName": "José",
         "middleName": "dos",
         "lastName": "Campos",
-        "employeeId": "",
+        "employeeId": "00015",
         "user_name": "josecampos",
         "user_password": "12345678",
         "re_password": "12345678"
+    },
+    "completo com foto": {
+        "firstName": "José",
+        "middleName": "dos",
+        "lastName": "Campos",
+        "employeeId": "00016"
     }
-]
+}
