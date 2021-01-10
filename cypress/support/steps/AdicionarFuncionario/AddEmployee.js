@@ -6,13 +6,13 @@ before(()=>{
         funcionarios=info
     })
 })
-When('é preenchido o nome do funcionário', dt => {
-    const a = "sem id"
-    console.log(funcionarios[a])
-    dt.hashes().forEach(item =>{
-        addEmpPage.setFirstName(item.first_name)
-        addEmpPage.setMiddleName(item.middle_name)
-        addEmpPage.setLastName(item.last_name)
+When('é preenchido o nome do funcionário {string}', (teste, dt) => {
+    cy.wait(1000)
+    .log(addEmpPage.getId())
+    cy.fixture('addFuncionario').then(dados =>{
+        addEmpPage.setFirstName(dados[teste].firstName)
+        addEmpPage.setMiddleName(dados[teste].middleName)
+        addEmpPage.setLastName(dados[teste].lastName)
     })
 })
 

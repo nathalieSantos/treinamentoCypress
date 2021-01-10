@@ -15,6 +15,15 @@ class AddEmployeePage {
     setLastName(lastName) {
         cy.typeChecaVazio(addEmpElements.lastNameField(), lastName)
     }
+    getId(){
+        cy.get(addEmpElements.idField())
+            .invoke('attr', 'value').then(id=>{
+                cy.log(id).then(()=>{
+                    return id
+                })
+                
+            })
+    }
     setId(id) {
         cy.get(addEmpElements.idField)
             .clear()
