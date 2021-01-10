@@ -1,8 +1,5 @@
 import LoginPage from '../pageobjects/LoginPage'
-import PIMPage from '../pageobjects/PIMPage'
-const secoes = {'Adicionar Funcionário': '/pim/addEmployee'}
 const loginPage = new LoginPage
-const pimPage = new PIMPage
 
 Given('o acesso ao sistema', () => {
 	loginPage.systemAccess()
@@ -17,6 +14,13 @@ And('informadas as credenciais', () => {
     })
 })
 
-And('acesso a seção {string}', (secao) => {
-	cy.visit(secoes[secao])
+And('confirmado o acesso ao sistema', () => {
+	loginPage.accessOk()
+})
+
+And('acesso à seção {string}', (secao) => {
+    cy.fixture('secoes.json')
+    .then(secoes => {
+        cy.visit(secoes[secao])
+    })
 })
