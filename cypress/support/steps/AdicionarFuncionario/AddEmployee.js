@@ -6,21 +6,48 @@ before(()=>{
         funcionarios=info
     })
 })
-When('é preenchido o nome do funcionário {string}', (teste, dt) => {
-    cy.wait(1000)
-    .log(addEmpPage.getId())
-    cy.fixture('addFuncionario').then(dados =>{
-        addEmpPage.setFirstName(dados[teste].firstName)
-        addEmpPage.setMiddleName(dados[teste].middleName)
-        addEmpPage.setLastName(dados[teste].lastName)
-    })
+When('é preenchido o nome do funcionário {string}', (teste) => {
+    addEmpPage.setFirstName(funcionarios[teste].firstName)
+    addEmpPage.setMiddleName(funcionarios[teste].middleName)
+    addEmpPage.setLastName(funcionarios[teste].lastName)
+    addEmpPage.setId(funcionarios[teste].employeeId)
+})
+
+And('é preenchido os detalhes de login do funcionário {string}', (teste) =>{
+    addEmpPage.setUsername(funcionarios[teste].user_name)
+    addEmpPage.setPassword(funcionarios[teste].user_password)
+    addEmpPage.setRePassword(funcionarios[teste].re_password)
+})
+
+And('é adicionado uma imagem', () =>{
+    addEmpPage.clickSendPhoto()
+})
+
+When('marco a opção de criar detalhes de login', () =>{
+    addEmpPage.checkLoginDetail()
 })
 
 And('persistir as informações', () => {
-	//addEmpPage.saveEmployee()
+	addEmpPage.saveEmployee()
 })
 
 Then('o funcionário é adicionado ao sistema', () => {
 	cy.url().should('contain', 'viewPersonalDetails')
+})
+
+Then('o funcionário não é adicionado ao sistema', () => {
+    cy.url().should('contain', 'addEmployee')
+})
+
+And('é informado erro {string}', (teste) =>{
+    cy.get(`span[for="${funcionarios[teste].erro}"]`)
+        .invoke('text')
+        .should('eq', funcionarios[teste].msgErro)
+})
+
+And('é informado usuário já existente', () =>{
+    cy.get('div[class="message warning fadable"]')
+        .invoke('text')
+        .should('contain', 'Employee Id Exists')
 })
 

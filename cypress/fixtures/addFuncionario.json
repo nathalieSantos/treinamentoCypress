@@ -9,13 +9,17 @@
         "firstName": "",
         "middleName": "dos",
         "lastName": "Campos",
-        "employeeId": "00002"
+        "employeeId": "00002",
+        "erro": "firstName",
+        "msgErro": "Required"
     },
     "sem último nome sem login": {
         "firstName": "José",
         "middleName": "dos",
         "lastName": "",
-        "employeeId": "00003"
+        "employeeId": "00003",
+        "erro": "lastName",
+        "msgErro": "Required"
     },
     "sem id":{
         "firstName": "José",
@@ -33,7 +37,9 @@
         "firstName": "José",
         "middleName": "dos",
         "lastName": "Campos",
-        "employeeId": "0002A"
+        "employeeId": "0002A",
+        "erro": "employeeId",
+        "msgErro": "Invalid Id"
     },
     "completo com login": {
         "firstName": "José",
@@ -51,7 +57,9 @@
         "employeeId": "00007",
         "user_name": "josecampos",
         "user_password": "testeCypress",
-        "re_password": "testeCypress"
+        "re_password": "testeCypress",
+        "erro": "firstName",
+        "msgErro": "Required"
     },
     "sem último nome com login": {
         "firstName": "José",
@@ -60,7 +68,9 @@
         "employeeId": "00008",
         "user_name": "josecampos",
         "user_password": "testeCypress",
-        "re_password": "testeCypress"
+        "re_password": "testeCypress",
+        "erro": "lastName",
+        "msgErro": "Required"
     },
     "sem usuário": {
         "firstName": "José",
@@ -69,7 +79,9 @@
         "employeeId": "00009",
         "user_name": "",
         "user_password": "testeCypress",
-        "re_password": "testeCypress"
+        "re_password": "testeCypress",
+        "erro": "user_name",
+        "msgErro": "Should have at least 5 characters"
     },
     "sem senha": {
         "firstName": "José",
@@ -78,7 +90,9 @@
         "employeeId": "00010",
         "user_name": "josecampos",
         "user_password": "",
-        "re_password": "testeCypress"
+        "re_password": "testeCypress",
+        "erro": "user_password",
+        "msgErro": "Should have at least 8 characters"
     },
     "sem repetir senha": {
         "firstName": "José",
@@ -87,7 +101,9 @@
         "employeeId": "00011",
         "user_name": "josecampos",
         "user_password": "testeCypress",
-        "re_password": ""
+        "re_password": "",
+        "erro": "re_password",
+        "msgErro": "Passwords do not match"
     },
     "com usuário inválido": {
         "firstName": "José",
@@ -96,7 +112,9 @@
         "employeeId": "00012",
         "user_name": "jose",
         "user_password": "testeCypress",
-        "re_password": "testeCypress"
+        "re_password": "testeCypress",
+        "erro": "user_name",
+        "msgErro": "Should have at least 5 characters"
     },
     "com senha inválida": {
         "firstName": "José",
@@ -105,7 +123,9 @@
         "employeeId": "00013",
         "user_name": "josecampos",
         "user_password": "teste",
-        "re_password": "teste"
+        "re_password": "teste",
+        "erro": "user_password",
+        "msgErro": "Should have at least 8 characters"
     },
     "com repetir senha incompatível": {
         "firstName": "José",
@@ -114,7 +134,9 @@
         "employeeId": "00014",
         "user_name": "josecampos",
         "user_password": "testeCypress",
-        "re_password": "teste"
+        "re_password": "teste",
+        "erro": "re_password",
+        "msgErro": "Passwords do not match"
     },
     "com senha muito fraca": {
         "firstName": "José",
@@ -123,7 +145,9 @@
         "employeeId": "00015",
         "user_name": "josecampos",
         "user_password": "12345678",
-        "re_password": "12345678"
+        "re_password": "12345678",
+        "erro": "user_password",
+        "msgErro": "Password must be stronger"
     },
     "completo com foto": {
         "firstName": "José",
