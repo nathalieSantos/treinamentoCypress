@@ -20,7 +20,7 @@ And('é preenchido os detalhes de login do funcionário {string}', (teste) =>{
 })
 
 And('é adicionado uma imagem', () =>{
-    addEmpPage.clickSendPhoto()
+    addEmpPage.getPhotoInput().attachFile('perfilteste.jpg')
 })
 
 When('marco a opção de criar detalhes de login', () =>{

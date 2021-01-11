@@ -46,7 +46,7 @@ Scenario: Adicionando funcionário sem detalhes de login e com foto
     | primeiro nome | nome do meio | último nome | id    |
     | José          | dos          | Campos      | 00016 |
     And é adicionado uma imagem
-    #And persistir as informações
+    And persistir as informações
     Then o funcionário é adicionado ao sistema
 
 #Campos obrigatórios

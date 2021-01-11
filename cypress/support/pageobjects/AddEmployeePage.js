@@ -37,9 +37,8 @@ class AddEmployeePage {
         cy.get(addEmpElements.statusSelect())
             .select(status)
     }
-    clickSendPhoto(){
-        cy.get(addEmpElements.selectPhotoFile())
-            .click()
+    getPhotoInput(){
+        return cy.get(addEmpElements.selectPhotoFile())
     }
     saveEmployee() {
         cy.get(addEmpElements.saveBtn())
