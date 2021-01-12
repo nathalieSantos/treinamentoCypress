@@ -10,7 +10,6 @@ Feature: Excluir Funcionário
         And confirmado o acesso ao sistema
         And acesso à seção "Lista de Funcionários"
 
-    @focus
     Scenario: Excluir Funcionário
         And selecionar um funcionário
         When tentar excluir este funcionário
