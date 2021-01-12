@@ -51,20 +51,22 @@ Scenario: Adicionando funcionário sem detalhes de login e com foto
 
 #Campos obrigatórios
 
-Scenario Outline: Adicionando funcionário sem preencher campos obrigatórios sem detalhes de login
+Scenario Outline: Adicionando funcionário <teste>
     When é preenchido o nome do funcionário "<teste>"
     | primeiro nome | nome do meio | último nome | id    |
     |               | dos          | Campos      | 00002 |
     | José          | dos          |             | 00003 |
+    | José          | dos          | Campos      |       |
     And persistir as informações
     Then o funcionário não é adicionado ao sistema
     And é informado erro "<teste>"
     Examples:
         | teste                       | 
         | sem primeiro nome sem login | 
-        | sem último nome sem login   |  
+        | sem último nome sem login   |
+        | sem id                      |  
 
-Scenario Outline: Adicionando funcionário sem preencher campos obrigatórios com detalhes de login
+Scenario Outline: Adicionando funcionário <teste>
     When marco a opção de criar detalhes de login
     And é preenchido o nome do funcionário "<teste>"
     | primeiro nome | nome do meio | último nome | id    |
@@ -105,9 +107,11 @@ Scenario: Adicionando funcionário com detalhes de login
     Then o funcionário é adicionado ao sistema
 
 #Limite de caracteres
+
 Scenario: Preenchendo campos além do limite permitido
-    When são preenchidos os campos além do limite
-    Then a quantidade de caracteres no campo não passa do limite
+    When marco a opção de criar detalhes de login
+    And são preenchidos os campos além do "limite de caracteres"
+    Then a quantidade de caracteres nos campo não passa do "limite de caracteres"
 
 #Campo usuário
 
