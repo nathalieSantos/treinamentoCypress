@@ -2,8 +2,13 @@
 class EmpList {
 
     selectEmp() {
-        cy.get('tbody > tr:nth-child(1) > td:nth-child(1)')
-        .click()
+        cy.get('tbody > tr:nth-child(1) > td:nth-child(1)').click()
+        /*cy.get('tbody > tr')
+        .eq(0)
+        .find('td')
+        .eq(0)
+        .children()
+        .click()*/
     }
 
     selectAll(){
@@ -24,6 +29,15 @@ class EmpList {
         .then(res => {
             cy.wrap(res).as('id')
         })
+        /*cy.get('tbody > tr')
+        .eq(0)
+        .find('td')
+        .eq(1)
+        .children()
+        .invoke('text')
+        .then(res => {
+            cy.wrap(res).as('id')
+        })*/
     }
 
     deleteBtn(){
