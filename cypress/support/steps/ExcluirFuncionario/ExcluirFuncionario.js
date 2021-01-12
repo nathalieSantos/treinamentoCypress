@@ -1,4 +1,4 @@
-import EmpList from '../pageobjects/EmpList'
+import EmpList from '../../pageobjects/EmpList'
 const empList = new EmpList
  
 And('selecionar um funcionário', () => {
