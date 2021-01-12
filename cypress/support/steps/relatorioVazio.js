@@ -1,15 +1,16 @@
-/*global Given, Then, When */ 
+/*global Given, Then, When */   
+import CreateReport from '../pageobjects/CreateReport'
+const relatorio = new CreateReport 
 
 And('não se forneça nenhuma informação', () =>{
     cy.get('#report_report_name').should('contain', '')
-    //display_fieldset
     cy.get('display_groups').should('not.exist')
 })
 
 And('confirmar envio do relatório', () =>{
-    cy.get('#btnSave').click()
+    relatorio.enviarRelatorio()
 })
 
-And('são indicados os inputs requeridos', () =>{
-    cy.get('span[class="validation-error"]').should('exist')
+And('são indicados as seções obrigatorias', () =>{
+    relatorio.inputRequerido()
 })
