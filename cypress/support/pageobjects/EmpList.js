@@ -3,6 +3,7 @@ class EmpList {
 
     selectEmp() {
         cy.get('tbody > tr:nth-child(1) > td:nth-child(1)')
+        .children()
         .click()
     }
 
@@ -21,9 +22,7 @@ class EmpList {
         .next()
         .children()
         .invoke('text')
-        .then(res => {
-            cy.wrap(res).as('id')
-        })
+        .as('id')
     }
 
     deleteBtn(){
