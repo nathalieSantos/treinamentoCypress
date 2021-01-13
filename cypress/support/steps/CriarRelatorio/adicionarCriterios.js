@@ -1,5 +1,5 @@
 /*global Given, Then, When */   
-import CreateReport from '../pageobjects/CreateReport'
+import CreateReport from '../../pageobjects/CreateReport'
 const relatorio = new CreateReport   
 
 And('preencher informações {string}, {string}', (nome, grupo) =>{
