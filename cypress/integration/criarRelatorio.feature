@@ -9,7 +9,7 @@ Feature: Criar Relatório
         And informadas as credenciais
         And confirmado o acesso ao sistema
 		And acesso à seção "PIM"
-		And acesso à seção "Reports"
+		And acesso à seção "Relatórios"
         And acesso à seção "Add"
 
 #RN: É possível criar um relatório 
