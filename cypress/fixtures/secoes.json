@@ -2,6 +2,6 @@
 
     "Lista de Funcionários": "/pim/viewEmployeeList",
     "Relatórios": "/core/viewDefinedPredefinedReports/reportGroup/3/reportType/PIM_DEFINED",
-    "Editar Relatórios": "/core/definePredefinedReport?reportId=6"
-
+    "Editar Relatórios": "/core/definePredefinedReport?reportId=6",
+    "Adicionar Funcionário": "/pim/addEmloyee"
 }
