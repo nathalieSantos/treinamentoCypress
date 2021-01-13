@@ -7,6 +7,7 @@ Feature: Criar Relatório
     Background: 
         Given o acesso ao sistema
         And informadas as credenciais
+        And confirmado o acesso ao sistema
 		And acesso à seção "PIM"
 		And acesso à seção "Reports"
         And acesso à seção "Add"
@@ -68,7 +69,7 @@ Feature: Criar Relatório
         Examples:
             | nome       	   	                       | seleçãoGrupo    | campo1      | campo2         |
             | Relatório de Dependentes de Funcionários | Contact Details | Other Email | Home Telephone |
-@focus
+
 #RN: O input nome não tem um limite de caracteres 		
 Scenario Outline: Limite de Caracteres do nome do relatório
         And preencha as informações "<nome>", "<seleçãoGrupo>"

@@ -23,3 +23,14 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+import 'cypress-file-upload'
+
+Cypress.Commands.add('typeChecaVazio', (campo, texto) => {
+    if(texto === ""){
+        cy.get(campo)
+        .clear()
+    }else{
+        cy.get(campo)
+        .type(texto)
+    }
+})

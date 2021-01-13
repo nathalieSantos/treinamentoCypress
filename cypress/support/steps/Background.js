@@ -14,6 +14,10 @@ And('informadas as credenciais', () => {
     })
 })
 
+And('confirmado o acesso ao sistema', () => {
+	loginPage.accessOk()
+})
+
 And('acesso à seção {string}', (secao) => {
     cy.fixture('secoes.json')
     .then(secoes => {
