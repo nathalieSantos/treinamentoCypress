@@ -80,7 +80,6 @@ Feature: Buscar Funcionário
             | Current and Past Employees  | 
             | Past Employees Only         |
 
-     @focus
      Scenario: Buscar funcionários sem usar filtro
         But deixo o filtro em branco
         When tentar buscar os funcionários

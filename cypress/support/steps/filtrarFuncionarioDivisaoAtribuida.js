@@ -7,5 +7,5 @@ When('preencho o filtro usando a {string}', (divisao) => {
 })
 
 Then('os funcionários da divisão {string} são filtrados', (divisao) => {
-    searchEmpListPage.searchEmployee(divisao)
+    searchEmpListPage.resultTable(divisao)
 })

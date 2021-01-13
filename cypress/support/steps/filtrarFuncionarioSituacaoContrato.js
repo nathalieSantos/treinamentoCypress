@@ -7,5 +7,5 @@ And('preencho o filtro incluindo a {string}', (situacaoContrato) => {
 })
 
 Then('os funcionários com a situação {string} são filtrados', (situacaoContrato) => {
-	searchEmpListPage.searchEmployee(situacaoContrato)
+	searchEmpListPage.searchTable(situacaoContrato)
 })

@@ -7,5 +7,5 @@ And('preencho o filtro usando {string}', (tipoContrato) => {
 });
 
 Then('os funcionários dos contratos de tipo {string} são filtrados', (tipoContrato) => {
-	searchEmpListPage.searchEmployee(tipoContrato)
+	searchEmpListPage.resultTable(tipoContrato)
 });

@@ -7,5 +7,5 @@ And('preencho o filtro supervisor usando {string}', (supervisor) => {
 })
 
 Then('os funcionários supervisionados por {string} são filtrados', (supervisor) => {
-    cy.get('#resultTable').should('contain', supervisor)
+    searchEmpListPage.resultTable(supervisor)
 });

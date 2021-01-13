@@ -7,5 +7,5 @@ And('preencho o filtro usando o {string}', (cargo) => {
 });
 
 Then('os funcionários de cargo {string} são filtrados', (cargo) => {
-	cy.get('#resultTable').should('contain', cargo)
+	searchEmpListPage.resultTable(cargo)
 });

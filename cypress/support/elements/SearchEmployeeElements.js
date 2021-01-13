@@ -8,7 +8,8 @@ class SearchEmployeeElements{
     subUnitField = () => { return '#empsearch_sub_unit'}
     includeField = () => { return '#empsearch_termination'}
     searchField = () => { return '#searchBtn'}
-
+    resultTable = () => { return '#resultTable'}
+    searchTable = () => { return '#employee-information'}
 }
 
 export default SearchEmployeeElements

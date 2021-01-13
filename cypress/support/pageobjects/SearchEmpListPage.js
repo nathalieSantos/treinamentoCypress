@@ -43,6 +43,15 @@ class SearchEmpListPage {
         cy.get(searchEmployeeElements.searchField()).click()
     }
 
+    resultTable(string){
+        cy.get(searchEmployeeElements.resultTable()).should('contain', string)
+    }
+
+    searchTable(string){
+        cy.get(searchEmployeeElements.searchTable()).should('contain', string)
+    }
+   
+
 }
 
 export default SearchEmpListPage

@@ -13,5 +13,5 @@ When('tentar buscar o funcionário', () => {
 
 
 Then('o funcionário do {string} é filtrado', (ID) => {
-	cy.get('#resultTable').should('contain', ID)
+	searchEmpListPage.resultTable(ID)
 })
