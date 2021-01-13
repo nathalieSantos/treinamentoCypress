@@ -4,5 +4,5 @@
     "Add": "/core/definePredefinedReport",
     "Relatórios": "/core/viewDefinedPredefinedReports/reportGroup/3/reportType/PIM_DEFINED",
     "Editar Relatórios": "/core/definePredefinedReport?reportId=6",
-    "Adicionar Funcionário": "/pim/addEmloyee"
+    "Adicionar Funcionário": "/pim/addEmployee"
 }
