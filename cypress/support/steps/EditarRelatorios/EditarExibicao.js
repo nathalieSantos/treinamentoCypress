@@ -1,5 +1,5 @@
 /* global Given, Then, When */
-import EditRelatorio from '../pageobjects/EditRelatorio'
+import EditRelatorio from '../../pageobjects/EditRelatorio'
 const editRelatorio = new EditRelatorio
 
 When('editar seção de grupos de {string}', (Exibição) =>{

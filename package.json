@@ -19,7 +19,8 @@
   "homepage": "https://github.com/nathalieSantos/treinamentoCypress#readme",
   "devDependencies": {
     "cypress": "^6.2.1",
-    "cypress-cucumber-preprocessor": "^4.0.0"
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "cypress-file-upload": "^4.1.1"
   },
   "cypress-cucumber-preprocessor": {
     "step_definitions": "cypress/support/steps"
