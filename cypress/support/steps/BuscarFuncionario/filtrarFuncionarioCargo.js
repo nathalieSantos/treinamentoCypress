@@ -1,4 +1,4 @@
-import SearchEmpListPage from '../pageobjects/SearchEmpListPage'
+import SearchEmpListPage from '../../pageobjects/SearchEmpListPage'
 
 const searchEmpListPage = new SearchEmpListPage
 
