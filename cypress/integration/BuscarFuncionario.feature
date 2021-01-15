@@ -79,8 +79,3 @@ Feature: Buscar Funcionário
             | Current Employees Only      | 
             | Current and Past Employees  | 
             | Past Employees Only         |
-
-     Scenario: Buscar funcionários sem usar filtro
-        But deixo o filtro em branco
-        When tentar buscar os funcionários
-        Then a lista de funcionários continua a mesma
