@@ -10,6 +10,7 @@ Feature: Buscar Funcionário
         And confirmado o acesso ao sistema
         And acesso à seção "Lista de Funcionários"
 
+    #RN01: É possível buscar funcionários por nome
     Scenario Outline: Filtrar funcionário por nome
         And preencho o filtro por "<nome>"
         When tentar buscar os funcionários
@@ -20,6 +21,7 @@ Feature: Buscar Funcionário
             | Sania   |
             | Jasmine |
 
+    #RN02: É possível buscar funcionários por nome do supervisor
     Scenario Outline: Filtrar funcionário por nome do surpervisor
         And preencho o filtro supervisor usando "<nomeSupervisor>"
         When tentar buscar os funcionários
@@ -30,16 +32,18 @@ Feature: Buscar Funcionário
             | Aaliyah  Haq   |
             | Fiona  Grace   |            
 
+    #RN03: É possível buscar um funcionário por ID
     Scenario Outline: Filtrar funcionário por ID
         And preencho o filtro usando o "<id>" do funcionário
         When tentar buscar o funcionário
         Then o funcionário do "<id>" é filtrado
         Examples:
             | id   |
-            | 0204 |
-            | 0261 |
-            | 0050 |
+            | 0002 |
+            | 0007 |
+            | 0208 |
 
+    #RN04: É possível buscar funcionários por cargo
     Scenario Outline: Filtrar funcionário por cargo
         And preencho o filtro usando o "<nomeDoCargo>"
         When tentar buscar os funcionários
@@ -50,6 +54,7 @@ Feature: Buscar Funcionário
             | Chief Financial Officer  |
             | Chief Technical Officer  |
           
+    #RN05: É possível buscar funcionários por tipo de contrato
     Scenario Outline: Filtrar funcionário por tipo de contrato
         And preencho o filtro usando "<tipoDeContrato>"
         When tentar buscar os funcionários
@@ -60,6 +65,7 @@ Feature: Buscar Funcionário
             | Full-Time Contract   | 
             | Full-Time Permanent  | 
 
+    #RN06: É possível buscar funcionários por divisao atribuida
     Scenario Outline: Filtrar funcionário por divisao atribuida
         And preencho o filtro usando a "<divisaoAtribuida>"
         When tentar buscar os funcionários
@@ -70,6 +76,7 @@ Feature: Buscar Funcionário
             | Engineering       |
             | Development       |
 
+    #RN07: É possível buscar funcionários por situacao do contrato
     Scenario Outline: Filtrar funcionário por situacao do contrato
         And preencho o filtro incluindo a "<situacaoContratoFuncionario>"
         When tentar buscar os funcionários
