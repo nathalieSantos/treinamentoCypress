@@ -7,6 +7,7 @@ PARA facilitar o acesso às informações que desejo verificar
     Background: 
         Given o acesso ao sistema
         And informadas as credenciais
+        And confirmado o acesso ao sistema
         And acesso à seção "Lista de Funcionários"
         And acesso à seção "Relatórios"
         And acesso à seção "Editar Relatórios"
@@ -15,11 +16,11 @@ PARA facilitar o acesso às informações que desejo verificar
     Scenario Outline: Adicionando Números
         When inserir números na seção '<nome>'
         And confirmar alteração realizada
-        Then é exibido números no nome
+        Then é exibido confirmação de mudança
+        And é exibido números no nome
         Examples:
             | nome                   | 
             | 12356                  | 
-            | 000000                 |
 
 #RN02: É possível editar critérios de seleção    
     Scenario Outline: Editando critérios
@@ -28,8 +29,8 @@ PARA facilitar o acesso às informações que desejo verificar
         And confirmar alteração realizada
         Then é exibido confirmação de mudança
         Examples:
-        | critérios               | Idioma              | 
-        | language                | Arabic              |
+            | critérios               | Idioma              | 
+            | language                | Arabic              |
 
 #RN03: É possível editar seção de exibição  
     Scenario Outline: Editando seção de exibição
@@ -49,14 +50,14 @@ PARA facilitar o acesso às informações que desejo verificar
         And é exibido relatórios com nomes iguais
         Examples:
             | Nome                   | 
-            | Relatório de presença  | 
+            | Relatório de presença  |
 
 #RN05: Não é possível adicionar dois critérios de exibição iguais  
     Scenario: Adicionando critérios de exibição iguais
         When adicionar seção de grupos de exibição 
-        | DOGroups                | 
-        | Dependents              | 
+            | DOGroups                | 
+            | Dependents              | 
         And tento adicionar a mesma seção de grupos de exibição 
-        | DOGroups                | 
-        | Dependents              |    
+            | DOGroups                | 
+            | Dependents              |    
         Then é exibido apenas uma seção

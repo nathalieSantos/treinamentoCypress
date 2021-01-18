@@ -1,17 +1,13 @@
 /* global Given, Then, When */
+import EditRelatorio from '../../pageobjects/EditRelatorio'
+const editRelatorio = new EditRelatorio
 
 When('inserir informações na seção {string}', (Nome) =>{
-    cy.get('#report_report_name')
-    .clear()
-    .type(Nome)
-    cy.visit('https://opensource-demo.orangehrmlive.com/index.php/core/definePredefinedReport?reportId=5')
-    cy.get('#report_report_name')
-    .clear()
-    .type(Nome)
+    editRelatorio.inserirInfor(Nome)
 })
 And('confirmar alteração realizada', ()=> {
     cy.get('#btnSave')
-    .click()
+    .click({force: true})
 })
             
 Then('é exibido confirmação de alteração realizada', () => {
@@ -19,7 +15,7 @@ Then('é exibido confirmação de alteração realizada', () => {
     
 })
 And('é exibido relatórios com nomes iguais', ()=> {
-    cy.contains('Relatório de presença')
-    .should('be.visible')
+    editRelatorio.nomesIguais()
 })
+
 

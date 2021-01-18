@@ -13,7 +13,7 @@ And('confirmar alteração realizada', ()=> {
     cy.get('#btnSave')
     .click()
 })
-            
+
 Then('é exibido confirmação de alteração realizada', () => {
     cy.get('.message').should('exist')
     
